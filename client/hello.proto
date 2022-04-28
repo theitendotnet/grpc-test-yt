@@ -1,0 +1,17 @@
+syntax = "proto3";
+package client;
+option csharp_namespace = "models";
+
+service HelloService {
+    rpc Greet (Request) returns (Response);
+}
+
+message Request {
+    string firstName = 1;
+    string lastName = 2;
+}
+
+message Response {
+    string result = 1;
+}
+
